@@ -62,40 +62,40 @@ void ShowArray (int [] arr)
         }
 }
 
-// //Task1________________________________________
-// int numberA = GetCheckedNumber ("Введите первое положительное целое число цифрами");
-// int numberB = GetCheckedNumber ("Введите второе положительное целое число цифрами");
+//Task1________________________________________
+int numberA = GetCheckedNumber ("Введите первое положительное целое число цифрами");
+int numberB = GetCheckedNumber ("Введите второе положительное целое число цифрами");
 
-// int result = numberA;
+int result = numberA;
 
-// for (int i = 1; i < numberB; i++)
-// {
-//     result = result * numberA;
-// }
+for (int i = 1; i < numberB; i++)
+{
+    result = result * numberA;
+}
 
-// Console.WriteLine (result);
-// //_____________________________________________
+Console.WriteLine (result);
+//_____________________________________________
 
-// //Task2________________________________________
-// int number = GetCheckedNumber ("Введите целое положительное число");
-// string numberTextType = Convert.ToString(number);
+//Task2________________________________________
+int number = GetCheckedNumber ("Введите целое положительное число");
+string numberTextType = Convert.ToString(number);
 
-// int [] numberArrayType = new int [numberTextType.Length];
-// int toPut = 0;
-// for (int index = 0; index < numberTextType.Length; index++)
-// {
-//     toPut = Convert.ToInt32(new string (numberTextType [index], 1));
-//     numberArrayType[index] = toPut;
-// }
-// int sum = 0;
-// for (int a = 0; a < numberArrayType.Length; a++)
-// {
-//     sum = sum + numberArrayType [a];
-// }
-// Console.WriteLine ("Сумма цифр: " + sum);
-// //_____________________________________________
+int [] numberArrayType = new int [numberTextType.Length];
+int toPut = 0;
+for (int index = 0; index < numberTextType.Length; index++)
+{
+    toPut = Convert.ToInt32(new string (numberTextType [index], 1));
+    numberArrayType[index] = toPut;
+}
+int sum = 0;
+for (int a = 0; a < numberArrayType.Length; a++)
+{
+    sum = sum + numberArrayType [a];
+}
+Console.WriteLine ("Сумма цифр: " + sum);
+//_____________________________________________
 
-//Task3________________________________________
+// Task3________________________________________
 int [] array8Dig = new int [8];
 for (int f = 0; f < array8Dig.Length; f++)
 {
