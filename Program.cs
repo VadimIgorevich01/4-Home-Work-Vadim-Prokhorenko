@@ -2,14 +2,21 @@
 {
     Console.WriteLine (info);
     string? numberToBeChecked = Console.ReadLine();
-    while (isThereText(numberToBeChecked))
+    while (isThereText(numberToBeChecked) | TestForNullOrEmpty(numberToBeChecked))
     {
-        Console.WriteLine ("Условие не выполнено, попробуйте ввести иначе");
+        Console.WriteLine ("Условие не выполнено или строка пуста, попробуйте ввести иначе");
         Console.WriteLine (info);
         numberToBeChecked = Console.ReadLine ();
     }
     int numberOk = Convert.ToInt32(numberToBeChecked);
     return numberOk;
+}
+
+bool TestForNullOrEmpty(string s)
+{
+    bool result;
+    result = s == null || s == string.Empty;
+    return result;
 }
 
 bool isThereText (string typedNumber)
