@@ -46,28 +46,46 @@ bool isThereText (string typedNumber)
     }
 }
 
-
-//Task1________________________________________
-int numberA = GetCheckedNumber ("Введите первое положительное целое число цифрами");
-int numberB = GetCheckedNumber ("Введите второе положительное целое число цифрами");
-
-int result = numberA;
-
-for (int i = 1; i < numberB; i++)
+void ShowArray (int [] arr)
 {
-    result = result * numberA;
+    Console.Write("Наш массив: ");
+    for (int w = 0; w < arr.Length; w++)
+        {
+            Console.Write(arr [w] + " ");
+        }
 }
 
-Console.WriteLine (result);
-//_____________________________________________
+// //Task1________________________________________
+// int numberA = GetCheckedNumber ("Введите первое положительное целое число цифрами");
+// int numberB = GetCheckedNumber ("Введите второе положительное целое число цифрами");
+
+// int result = numberA;
+
+// for (int i = 1; i < numberB; i++)
+// {
+//     result = result * numberA;
+// }
+
+// Console.WriteLine (result);
+// //_____________________________________________
 
 // //Task2________________________________________
-// int number = GetCheckedNumber ("Введите целое положительное число");
+int number = GetCheckedNumber ("Введите целое положительное число");
+string numberTextType = Convert.ToString(number);
 
-// while (number < 0 && number == 0)
-// {
-//     number = GetCheckedNumber ("Введите точно целое положительное число, сэр");
-// }
+int [] numberArrayType = new int [numberTextType.Length];
+int toPut = 0;
+for (int index = 0; index < numberTextType.Length; index++)
+{
+    toPut = Convert.ToInt32(new string (numberTextType [index], 1));
+    numberArrayType[index] = toPut;
+}
+int sum = 0;
+for (int a = 0; a < numberArrayType.Length; a++)
+{
+    sum = sum + numberArrayType [a];
+}
+Console.WriteLine ("Сумма цифр: " + sum);
 
 
 
