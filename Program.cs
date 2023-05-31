@@ -70,22 +70,28 @@ void ShowArray (int [] arr)
 // //_____________________________________________
 
 // //Task2________________________________________
-int number = GetCheckedNumber ("Введите целое положительное число");
-string numberTextType = Convert.ToString(number);
+// int number = GetCheckedNumber ("Введите целое положительное число");
+// string numberTextType = Convert.ToString(number);
 
-int [] numberArrayType = new int [numberTextType.Length];
-int toPut = 0;
-for (int index = 0; index < numberTextType.Length; index++)
+// int [] numberArrayType = new int [numberTextType.Length];
+// int toPut = 0;
+// for (int index = 0; index < numberTextType.Length; index++)
+// {
+//     toPut = Convert.ToInt32(new string (numberTextType [index], 1));
+//     numberArrayType[index] = toPut;
+// }
+// int sum = 0;
+// for (int a = 0; a < numberArrayType.Length; a++)
+// {
+//     sum = sum + numberArrayType [a];
+// }
+// Console.WriteLine ("Сумма цифр: " + sum);
+// //_____________________________________________
+
+//Task3________________________________________
+int [] array8Dig = new int [8];
+for (int f = 0; f < array8Dig.Length; f++)
 {
-    toPut = Convert.ToInt32(new string (numberTextType [index], 1));
-    numberArrayType[index] = toPut;
-}
-int sum = 0;
-for (int a = 0; a < numberArrayType.Length; a++)
-{
-    sum = sum + numberArrayType [a];
-}
-Console.WriteLine ("Сумма цифр: " + sum);
-
-
-
+    array8Dig [f] = new Random ().Next (0, 10);
+} 
+ShowArray (array8Dig);
