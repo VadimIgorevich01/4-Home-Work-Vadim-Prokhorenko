@@ -48,10 +48,17 @@ bool isThereText (string typedNumber)
 
 void ShowArray (int [] arr)
 {
-    Console.Write("Наш массив: ");
+    Console.Write("Наш массив: [");
     for (int w = 0; w < arr.Length; w++)
         {
-            Console.Write(arr [w] + " ");
+            if (w != arr.Length - 1)
+            {
+                Console.Write(arr [w] + ", ");
+            }
+            else
+            {
+                Console.Write(arr [w] + "]");
+            }
         }
 }
 
@@ -92,6 +99,6 @@ void ShowArray (int [] arr)
 int [] array8Dig = new int [8];
 for (int f = 0; f < array8Dig.Length; f++)
 {
-    array8Dig [f] = new Random ().Next (0, 10);
+    array8Dig [f] = new Random ().Next (0, 100);
 } 
 ShowArray (array8Dig);
