@@ -2,7 +2,7 @@
 {
     Console.WriteLine (info);
     string? numberToBeChecked = Console.ReadLine();
-    while (isThereText(numberToBeChecked) | TestForNullOrEmpty(numberToBeChecked))
+    while (isThereText(numberToBeChecked!) | TestForNullOrEmpty(numberToBeChecked!))
     {
         Console.WriteLine ("Условие не выполнено или строка пуста, попробуйте ввести иначе");
         Console.WriteLine (info);
